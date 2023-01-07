@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eagle_users",
+  "info": {
+    "singularName": "eagle-user",
+    "pluralName": "eagle-users",
+    "displayName": "eagle-user"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "useremail": {
+      "type": "string"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "eagle_user"
+    }
+  }
+}
