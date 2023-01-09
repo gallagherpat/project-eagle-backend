@@ -4,7 +4,8 @@
   "info": {
     "singularName": "eagle-user",
     "pluralName": "eagle-users",
-    "displayName": "eagle-user"
+    "displayName": "eagle-user",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,14 +15,26 @@
     "username": {
       "type": "string"
     },
-    "useremail": {
-      "type": "string"
-    },
     "posts": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::post.post",
       "mappedBy": "eagle_user"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "authenticated": {
+      "type": "boolean"
+    },
+    "resetPassToken": {
+      "type": "string"
+    },
+    "confirmationToken": {
+      "type": "string"
     }
   }
 }
